@@ -1,0 +1,8 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh; /* Full height of the screen */
+    overflow: hidden; /* Prevent scrollbars from appearing */
+  }
+  
+  /* Add more styling as needed */
+  

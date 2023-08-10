@@ -1,28 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import WarehouseAdminPage from './pages/WarehouseAdminPage';
 
 function App() {
-  const [backendData, setBackendData] = useState([]);
-
-  useEffect(() => {
-    fetch('/api')
-      .then((res) => res.json()) // Correctly handling the fetch response
-      .then((data) => {
-        setBackendData(data.user); // Assuming you want to store the "user" array
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
-
   return (
-    <div>
-      <h1>Backend Data:</h1>
-      <ul>
-        {backendData.map((user, index) => (
-          <li key={index}>{user}</li>
-        ))}
-      </ul>
-    </div>
+    <Router>
+      <Route path="/warehouse-admin" component={WarehouseAdminPage} />
+      {/* Define more routes as needed */}
+    </Router>
   );
 }
 
