@@ -1,15 +1,81 @@
 .side-panel {
-    background-color: #333;
-    color: #fff;
-    width: 20%; /* 30% of the width */
-    height: 100vh; /* Full height of the screen */
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  /* Add more styling as needed */
-  
+  background-color: #333;
+  color: #fff;
+  width: 20%; /* 30% of the width */
+  height: 100vh; /* Full height of the screen */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff; /* Replace with your photo */
+  /* Add background-image or image tag for your profile photo */
+  /* Background size, position, and other styles */
+}
+
+.role {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option:hover {
+  background-color: #444;
+}
+
+.menu-section {
+  margin-top: 30px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.sub-heading {
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  color: #fff;
+}
+
+.sub-heading:hover {
+  background-color: #444;
+}
+
+.active {
+  background-color: #555;
+}
+
+/* Add more styling as needed */
