@@ -1,7 +1,67 @@
 .main-content {
-    margin-left: 25%; /* Leave space for the sidebar */
-    padding: 20px;
+  padding: 20px;
+  width: 70%;
+  margin-left: 25%;
+  overflow-y: auto;
+  }
+  .dashboard h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
   
-  /* Add more styling as needed */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
   
+  .card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .card-heading h3 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600; /* Semi-bold */
+    color: #666; /* Lighter color */
+  }
+  
+  .card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  .card-value {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    margin-top: 10px;
+    height: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #2ecc71;
+  }
