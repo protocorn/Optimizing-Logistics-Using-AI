@@ -1,8 +1,30 @@
 // MainContent.js
 import React from 'react';
 import './MainContent.css'; // Import your CSS file for styling
+//import SalesComparisonChart from './SalesComparisonChart';
+import { BarGraph } from './BarGraph';
+import { useState } from 'react';
+import Chart from "chart.js/auto";
+import { CategoryScale } from "chart.js";
+
+Chart.register(CategoryScale);
 
 function MainContent() {
+  const chartData = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'Sales',
+        backgroundColor: 'rgba(75,192,192,0.2)',
+        borderColor: 'rgba(75,192,192,1)',
+        borderWidth: 1,
+        hoverBackgroundColor: 'rgba(75,192,192,0.4)',
+        hoverBorderColor: 'rgba(75,192,192,1)',
+        data: [65, 59, 80, 81, 56, 55, 40],
+      },
+      // You can add more datasets if needed
+    ],
+  };
   return (
     <div className="main-content">
       <h1>Warehouse Admin Dashboard</h1>
@@ -43,6 +65,7 @@ function MainContent() {
           <p className="card-value">$5.3K</p>
         </div>
       </div>
+      <BarGraph chartData={chartData} />
     </div>
   );
 }
